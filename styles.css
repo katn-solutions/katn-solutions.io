@@ -210,6 +210,202 @@ header nav {
     margin-right: 0.5rem;
 }
 
+/* Standards Section */
+.standards {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+}
+
+.standards h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--navy-blue);
+}
+
+.standards-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.standards-intro {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.standards-card {
+    background: var(--white);
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.standards-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 31, 63, 0.15);
+}
+
+.standards-card h3 {
+    color: var(--navy-blue);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.standards-card p {
+    color: var(--black);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.standards-example {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--gold);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--navy-blue);
+}
+
+.standards-metric {
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.standards-philosophy {
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--dark-navy) 100%);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.standards-philosophy h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.standards-philosophy p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.standards-philosophy p:last-child {
+    margin-bottom: 0;
+}
+
+.standards-philosophy strong {
+    color: var(--gold);
+}
+
+/* AI Automation Section */
+.ai-automation {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.ai-automation h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--navy-blue);
+}
+
+.ai-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ai-intro {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.ai-card {
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.ai-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 31, 63, 0.15);
+}
+
+.ai-card h3 {
+    color: var(--navy-blue);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.ai-card > p {
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.ai-features {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.ai-features li {
+    padding: 0.5rem 0;
+    color: var(--black);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.ai-features li:before {
+    content: "⚡ ";
+    color: var(--gold);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.ai-tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--navy-blue);
+    font-weight: 600;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fffef8 0%, var(--light-gray) 100%);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
 /* Force Multiplier Section */
 .force-multiplier {
     padding: 5rem 0;

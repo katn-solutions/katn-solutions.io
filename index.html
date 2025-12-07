@@ -100,6 +100,110 @@
                         <li>Junior to mid-level engineer enablement</li>
                     </ul>
                 </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI-Powered Operations</h3>
+                    <p>Custom AI agents that diagnose issues, automate troubleshooting, and assist your team 24/7. Turn tribal knowledge into automation.</p>
+                    <ul class="service-details">
+                        <li>Diagnostic Slack bots for incident response</li>
+                        <li>RAG-powered code indexing for AI assistants</li>
+                        <li>Automated WAF analysis and remediation</li>
+                        <li>Self-service debugging for junior engineers</li>
+                        <li>85% MTTR reduction, 60-80% automation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📐</div>
+                    <h3>Engineering Standards & Code Quality</h3>
+                    <p>Establish world-class engineering standards with zero tolerance for violations. Security and compliance by design through automated enforcement.</p>
+                    <ul class="service-details">
+                        <li>Custom linter development (namedreturns, etc.)</li>
+                        <li>golangci-lint configuration and enforcement</li>
+                        <li>CI/CD quality gates and pre-merge validation</li>
+                        <li>GitOps standards (all changes through git)</li>
+                        <li>Self-documenting code practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="standards">
+        <div class="container">
+            <h2>Engineering Standards That Scale</h2>
+            <div class="standards-content">
+                <p class="standards-intro">Code quality isn't negotiable. I establish engineering standards that prevent bugs, security vulnerabilities, and technical debt before they reach production.</p>
+                <div class="standards-grid">
+                    <div class="standards-card">
+                        <h3>🔧 Custom Linter Development</h3>
+                        <p>Built <strong>namedreturns</strong> linter (github.com/nikogura/namedreturns) enforcing self-documenting code. Named return values make function signatures explicit about what they return, improving readability and reducing errors.</p>
+                        <p class="standards-example"><em>Example: func ProcessOrder() (orderID string, err error)</em> is self-documenting - you know exactly what comes back.</p>
+                    </div>
+                    <div class="standards-card">
+                        <h3>✅ Zero Tolerance Enforcement</h3>
+                        <p>Comprehensive golangci-lint configurations with mandatory checks. All new code must pass linting before merge. No exceptions. Security, compliance, and reliability by design.</p>
+                        <p class="standards-metric">Result: <strong>Zero security incidents from code quality issues</strong></p>
+                    </div>
+                    <div class="standards-card">
+                        <h3>🚦 Quality Gates & Pre-Merge Validation</h3>
+                        <p>CI/CD pipelines that catch issues before they reach production. Automated checks for complexity (gocognit), function length (funlen), error handling, proto field access, and more.</p>
+                        <p class="standards-metric">Result: <strong>100% lint compliance</strong> across organization</p>
+                    </div>
+                    <div class="standards-card">
+                        <h3>📚 GitOps Standards</h3>
+                        <p>All infrastructure changes through git. Immutable infrastructure. Every change reviewable, auditable, and reversible through git history. No manual changes to production systems.</p>
+                        <p class="standards-metric">Result: <strong>Complete audit trail</strong> for compliance</p>
+                    </div>
+                </div>
+                <div class="standards-philosophy">
+                    <h3>The Philosophy</h3>
+                    <p><strong>Clear is better than clever.</strong> Code should be boring, predictable, and maintainable. Linters enforce discipline that prevents entire classes of bugs and security vulnerabilities. When the linter complains, the code is wrong - not the linter.</p>
+                    <p><strong>Standards adopted org-wide.</strong> From Apple to fintech startups, I've established engineering standards that teams embrace because they prevent problems rather than create bureaucracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-automation">
+        <div class="container">
+            <h2>AI-Augmented Operations</h2>
+            <div class="ai-content">
+                <p class="ai-intro">Why wake someone up at 3am when an AI agent can diagnose and fix it? I build custom AI systems that capture your operational expertise and make it available 24/7 via Slack.</p>
+                <div class="ai-grid">
+                    <div class="ai-card">
+                        <h3>🤖 Diagnostic Slack Bots</h3>
+                        <p>AI agents integrated with your observability stack (Loki, Prometheus, Elasticsearch) that investigate incidents autonomously. Ask in Slack: "Why is the API slow?" and get correlated logs, metrics, and remediation steps.</p>
+                        <ul class="ai-features">
+                            <li>Automatically investigates WAF blocks with attacker IP analysis</li>
+                            <li>Diagnoses database migration failures with error correlation</li>
+                            <li>Troubleshoots pod crashes across Kubernetes clusters</li>
+                            <li>Generates professional PDF reports with findings</li>
+                        </ul>
+                    </div>
+                    <div class="ai-card">
+                        <h3>🔍 RAG Code Indexing</h3>
+                        <p>Make your codebase searchable by AI coding assistants. AST-based semantic analysis extracts patterns from your code - error handling, named returns, internal library usage - and indexes it for AI to suggest.</p>
+                        <ul class="ai-features">
+                            <li>AI suggests code following YOUR standards, not generic patterns</li>
+                            <li>Accelerates onboarding with searchable examples</li>
+                            <li>Integrates with Claude, GitHub Copilot, etc.</li>
+                            <li>Elasticsearch-backed with semantic search</li>
+                        </ul>
+                    </div>
+                    <div class="ai-card">
+                        <h3>⚡ Automation at Scale</h3>
+                        <p>Template-driven investigation workflows capture senior engineer expertise. Junior engineers get instant access to diagnostic knowledge that would otherwise require years to build.</p>
+                        <ul class="ai-features">
+                            <li>85% reduction in Mean Time To Resolution</li>
+                            <li>60-80% automation of routine diagnostics</li>
+                            <li>$400-500K annual savings in on-call burden</li>
+                            <li>Self-service debugging reduces escalations</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="ai-tagline">Real results: Automated operational engineering role out of existence through systematic capture of expertise. Your junior engineers perform like seniors with AI augmentation.</p>
             </div>
         </div>
     </section>
@@ -187,6 +291,30 @@
                         <span>Java</span>
                         <span>JavaScript</span>
                         <span>Ruby</span>
+                    </div>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>AI & Automation</h3>
+                    <div class="tech-tags">
+                        <span>Claude</span>
+                        <span>MCP</span>
+                        <span>RAG</span>
+                        <span>Slack Bots</span>
+                        <span>AI Agents</span>
+                        <span>AST Analysis</span>
+                    </div>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>Code Quality & Standards</h3>
+                    <div class="tech-tags">
+                        <span>golangci-lint</span>
+                        <span>namedreturns</span>
+                        <span>Custom Linters</span>
+                        <span>CI/CD Gates</span>
+                        <span>GitOps</span>
+                        <span>Static Analysis</span>
                     </div>
                 </div>
             </div>
