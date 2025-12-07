@@ -34,6 +34,42 @@
         </div>
     </section>
 
+    <section class="standards">
+        <div class="container">
+            <h2>Engineering Standards That Scale</h2>
+            <div class="standards-content">
+                <p class="standards-intro">Code quality isn't negotiable. KATN Solutions establishes engineering standards that prevent bugs, security vulnerabilities, and technical debt before they reach production.</p>
+                <div class="standards-grid">
+                    <div class="standards-card">
+                        <h3>🔧 Custom Linter Development</h3>
+                        <p>Custom linter development including <strong>namedreturns</strong> (github.com/nikogura/namedreturns) enforcing self-documenting code. Named return values make function signatures explicit about what they return, improving readability and reducing errors.</p>
+                        <p class="standards-example"><em>Example: func ProcessOrder() (orderID string, err error)</em> is self-documenting - you know exactly what comes back.</p>
+                    </div>
+                    <div class="standards-card">
+                        <h3>✅ Zero Tolerance Enforcement</h3>
+                        <p>Comprehensive golangci-lint configurations with mandatory checks. All new code must pass linting before merge. No exceptions. Security, compliance, and reliability by design.</p>
+                        <p class="standards-metric">Result: <strong>Zero security incidents from code quality issues</strong></p>
+                    </div>
+                    <div class="standards-card">
+                        <h3>🚦 Quality Gates & Pre-Merge Validation</h3>
+                        <p>CI/CD pipelines that catch issues before they reach production. Automated checks for complexity (gocognit), function length (funlen), error handling, proto field access, and more.</p>
+                        <p class="standards-metric">Result: <strong>100% lint compliance</strong> across organization</p>
+                    </div>
+                    <div class="standards-card">
+                        <h3>📚 GitOps Standards</h3>
+                        <p>All infrastructure changes through git. Immutable infrastructure. Every change reviewable, auditable, and reversible through git history. No manual changes to production systems.</p>
+                        <p class="standards-metric">Result: <strong>Complete audit trail</strong> for compliance</p>
+                    </div>
+                </div>
+                <div class="standards-philosophy">
+                    <h3>The Philosophy</h3>
+                    <p><strong>Clear is better than clever.</strong> Code should be boring, predictable, and maintainable. Linters enforce discipline that prevents entire classes of bugs and security vulnerabilities. When the linter complains, the code is wrong - not the linter.</p>
+                    <p><strong>Standards adopted org-wide.</strong> From enterprise to startups, KATN Solutions establishes engineering standards that teams embrace because they prevent problems rather than create bureaucracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services" class="services">
         <div class="container">
             <h2>Services</h2>
@@ -125,42 +161,6 @@
                         <li>GitOps standards (all changes through git)</li>
                         <li>Self-documenting code practices</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="standards">
-        <div class="container">
-            <h2>Engineering Standards That Scale</h2>
-            <div class="standards-content">
-                <p class="standards-intro">Code quality isn't negotiable. KATN Solutions establishes engineering standards that prevent bugs, security vulnerabilities, and technical debt before they reach production.</p>
-                <div class="standards-grid">
-                    <div class="standards-card">
-                        <h3>🔧 Custom Linter Development</h3>
-                        <p>Custom linter development including <strong>namedreturns</strong> (github.com/nikogura/namedreturns) enforcing self-documenting code. Named return values make function signatures explicit about what they return, improving readability and reducing errors.</p>
-                        <p class="standards-example"><em>Example: func ProcessOrder() (orderID string, err error)</em> is self-documenting - you know exactly what comes back.</p>
-                    </div>
-                    <div class="standards-card">
-                        <h3>✅ Zero Tolerance Enforcement</h3>
-                        <p>Comprehensive golangci-lint configurations with mandatory checks. All new code must pass linting before merge. No exceptions. Security, compliance, and reliability by design.</p>
-                        <p class="standards-metric">Result: <strong>Zero security incidents from code quality issues</strong></p>
-                    </div>
-                    <div class="standards-card">
-                        <h3>🚦 Quality Gates & Pre-Merge Validation</h3>
-                        <p>CI/CD pipelines that catch issues before they reach production. Automated checks for complexity (gocognit), function length (funlen), error handling, proto field access, and more.</p>
-                        <p class="standards-metric">Result: <strong>100% lint compliance</strong> across organization</p>
-                    </div>
-                    <div class="standards-card">
-                        <h3>📚 GitOps Standards</h3>
-                        <p>All infrastructure changes through git. Immutable infrastructure. Every change reviewable, auditable, and reversible through git history. No manual changes to production systems.</p>
-                        <p class="standards-metric">Result: <strong>Complete audit trail</strong> for compliance</p>
-                    </div>
-                </div>
-                <div class="standards-philosophy">
-                    <h3>The Philosophy</h3>
-                    <p><strong>Clear is better than clever.</strong> Code should be boring, predictable, and maintainable. Linters enforce discipline that prevents entire classes of bugs and security vulnerabilities. When the linter complains, the code is wrong - not the linter.</p>
-                    <p><strong>Standards adopted org-wide.</strong> From enterprise to startups, KATN Solutions establishes engineering standards that teams embrace because they prevent problems rather than create bureaucracy.</p>
                 </div>
             </div>
         </div>
