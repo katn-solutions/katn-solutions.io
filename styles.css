@@ -106,6 +106,14 @@ header nav {
     font-style: normal;
 }
 
+.value-prop {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
 .cta-button {
     display: inline-block;
     background-color: var(--gold);
@@ -200,6 +208,91 @@ header nav {
     color: var(--gold);
     font-weight: bold;
     margin-right: 0.5rem;
+}
+
+/* Force Multiplier Section */
+.force-multiplier {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--dark-navy) 100%);
+    color: var(--white);
+}
+
+.force-multiplier h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--gold);
+}
+
+.multiplier-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.multiplier-intro {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.multiplier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.multiplier-step {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.multiplier-step:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.multiplier-step h3 {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.multiplier-step p {
+    color: var(--white);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.multiplier-tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-top: 2rem;
+    line-height: 1.7;
 }
 
 /* Expertise Section */
