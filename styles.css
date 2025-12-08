@@ -491,6 +491,181 @@ header nav {
     line-height: 1.7;
 }
 
+/* Open Source Section */
+.open-source {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.open-source h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--navy-blue);
+}
+
+.open-source-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quote-box {
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--dark-navy) 100%);
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-left: 4px solid var(--gold);
+}
+
+.quote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.attribution {
+    font-size: 1rem;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.philosophy-intro {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.open-source-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.os-card {
+    background: var(--light-gray);
+    border: 2px solid var(--navy-blue);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.os-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 31, 63, 0.15);
+}
+
+.os-card h3 {
+    color: var(--navy-blue);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.os-card p {
+    color: var(--black);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.os-card em {
+    color: var(--gold);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.insight {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--gold);
+    font-style: italic;
+    color: var(--navy-blue);
+    font-weight: 500;
+}
+
+.os-value-prop {
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--dark-navy) 100%);
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.os-value-prop h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--gold);
+}
+
+.value-item strong {
+    color: var(--gold);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    color: var(--white);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.os-examples {
+    margin-top: 3rem;
+}
+
+.os-examples h3 {
+    color: var(--navy-blue);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.stack-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.stack-item {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+}
+
+.stack-item strong {
+    color: var(--navy-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.stack-item {
+    color: var(--black);
+    line-height: 1.6;
+}
+
 /* Expertise Section */
 .expertise {
     padding: 5rem 0;
