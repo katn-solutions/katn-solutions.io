@@ -816,6 +816,12 @@ header nav {
     line-height: 1.8;
     color: var(--black);
     margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.member-bio li {
+    margin-bottom: 0.75rem;
 }
 
 .member-links {
