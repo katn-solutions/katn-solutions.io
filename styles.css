@@ -760,6 +760,93 @@ header nav {
     line-height: 1.7;
 }
 
+/* Team Section */
+.team {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--navy-blue);
+}
+
+.team-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.member-photo {
+    text-align: center;
+}
+
+.member-photo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid var(--gold);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-info h3 {
+    font-size: 2rem;
+    color: var(--navy-blue);
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.member-bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.member-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.member-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--navy-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.member-link:hover {
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    transform: translateY(-2px);
+}
+
+.member-link svg {
+    flex-shrink: 0;
+}
+
 /* Contact Section */
 .contact {
     padding: 5rem 0;
@@ -949,6 +1036,20 @@ footer p {
     .achievement-grid,
     .expertise-grid {
         grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .member-photo img {
+        max-width: 200px;
+    }
+
+    .member-links {
+        justify-content: center;
     }
 
     .timeline::before {
