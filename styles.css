@@ -148,7 +148,7 @@ header nav {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -239,7 +239,7 @@ header nav {
 
 .standards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -344,7 +344,7 @@ header nav {
 
 .ai-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -560,7 +560,7 @@ header nav {
 
 .approach-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -610,7 +610,7 @@ header nav {
 
 .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -659,7 +659,7 @@ header nav {
 
 .achievement-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -1041,7 +1041,10 @@ footer p {
     .service-grid,
     .achievement-grid,
     .expertise-grid,
-    .multiplier-grid {
+    .multiplier-grid,
+    .standards-grid,
+    .ai-grid,
+    .approach-grid {
         grid-template-columns: 1fr;
     }
 
