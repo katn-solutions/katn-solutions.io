@@ -45,11 +45,50 @@ header nav {
     align-items: center;
 }
 
-.logo h1 {
-    color: var(--gold);
-    font-size: 1.8rem;
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.logo-shield {
+    height: 110px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-name {
+    color: var(--white);
     font-weight: 700;
-    letter-spacing: -0.5px;
+    line-height: 1.1;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.logo-name:first-child {
+    font-size: 2.8rem;
+    letter-spacing: 0.15em;
+}
+
+.logo-name-sub {
+    font-size: 1.7rem;
+    letter-spacing: 0.12em;
+}
+
+.logo-tagline {
+    color: var(--gold);
+    font-size: 0.55rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.4;
 }
 
 .nav-links {
