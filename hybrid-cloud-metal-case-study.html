@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: eliminating ~$17K/month in cloud egress by moving compute to the data — hybrid cloud + bare metal, secured on hardware we didn't own, one portable Kubernetes stack.">
+    <title>KATN Solutions | Hybrid Cloud + Bare Metal Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <style>
+        .cs-section { padding: 4rem 0; }
+        .cs-section:nth-of-type(even) { background: var(--light-gray); }
+        .cs-section h2 { color: var(--navy-blue); font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+        .cs-section h3 { color: var(--navy-blue); font-size: 1.3rem; margin: 2rem 0 0.75rem; text-align: center; }
+        .cs-section p { color: var(--black); line-height: 1.8; margin: 0 auto 1rem; max-width: 68ch; text-align: center; }
+        .cs-lead { font-size: 1.15rem; font-weight: 600; }
+        .cs-callout { border-left: 4px solid var(--gold); background: var(--white); padding: 1.25rem 1.5rem; margin: 1.5rem auto; border-radius: 0 8px 8px 0; box-shadow: 0 2px 10px rgba(0,31,63,0.06); max-width: 72ch; }
+        .cs-callout p { text-align: left; max-width: none; margin: 0; }
+        .cs-cta { text-align: center; padding: 4rem 0; }
+        .cs-cta p { margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-shield.png" alt="" class="logo-shield">
+                    <div class="logo-text">
+                        <span class="logo-name">KATN</span>
+                        <span class="logo-name logo-name-sub">SOLUTIONS</span>
+                        <span class="logo-tagline">Software Consulting &bull; Security Review</span>
+                        <span class="logo-tagline">&bull; Backend Infrastructure</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#ai-automation">AI Automation</a></li>
+                <li><a href="index.html#standards">Engineering Standards</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#expertise">Expertise</a></li>
+                <li><a href="index.html#achievements">Achievements</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="index.html#team">Leadership</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Put the Compute Where the Data Lives</h2>
+                <p class="tagline">A crypto trading platform was paying ~$17,000/month to move blockchain data into the cloud. We moved the compute to the data instead — and eliminated the bill.</p>
+                <p class="value-prop">Then we secured it on hardware we didn't own, against both a stolen disk and a stolen machine, and built one Kubernetes stack that runs the same in the cloud or on bare metal — so there was only ever one platform to maintain.</p>
+                <a href="#the-move" class="cta-button">See How</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>The Problem</h2>
+            <p class="cs-lead">The data was in one place. The compute that needed it was in another.</p>
+            <p>A cryptocurrency trading platform depended on blockchain nodes that ran on bare metal at a specialized provider — the kind of infrastructure that takes real skill to build and keep running. The platform's own workloads lived in the public cloud, and they had to talk to those nodes constantly to do their jobs. All that cross-network chatter carried a price: roughly <strong>$17,000 per month</strong> in data-egress charges, just to pull blockchain data into the cloud.</p>
+        </div>
+    </section>
+
+    <section id="the-move" class="cs-section">
+        <div class="container">
+            <h2>The Move: Compute Next to the Data</h2>
+            <p>Instead of dragging the data to the compute, we brought the compute to the data. We stood up a Kubernetes cluster — Talos Linux — on bare metal in the same datacenter as the blockchain nodes. Now the constant back-and-forth between workloads and nodes happens on the local network, for free. Only the finished, curated data is written back to the cloud.</p>
+            <p>And here's the quiet detail that makes it pay off: data flowing <em>into</em> AWS and GCP is free — the cloud charges you to take data out, not to put it in. So the return trip costs nothing. The ~$17,000/month egress bill didn't shrink. It went to zero.</p>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>The Catch: Securing Hardware You Don't Own</h2>
+            <p>Moving to bare metal solved the cost, but it created a security problem. We didn't own or manage the physical machines — the provider did. Sensitive data now sat on disks we couldn't physically control, so we planned for two very different kinds of theft.</p>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <h3>A Stolen or Recycled Disk</h3>
+                    <p class="achievement-impact">Full-disk encryption</p>
+                    <p>Every disk is fully encrypted, and the key never lives on it. Pull a disk out of a host — or get handed one that was recycled — and it's just noise.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>A Stolen Whole Machine</h3>
+                    <p class="achievement-impact">Operator-gated key release</p>
+                    <p>Encryption alone can't stop a machine that boots and decrypts itself. So the keys live in a key-management service that only releases them under explicit operator authorization. A stolen host asks to unlock — and we simply say no. It never boots.</p>
+                </div>
+            </div>
+            <div class="cs-callout">
+                <p>A disk is useless off its host; a host is useless off the network. Sensitive data stayed protected on infrastructure the company never physically controlled.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>One Stack, Anywhere</h2>
+            <p>Running Kubernetes in two very different worlds — a public cloud and unmanaged bare metal — could easily have meant two platforms to build, secure, and operate. We refused to pay that tax. Instead we designed a single, cloud-agnostic Kubernetes stack that runs identically in either place: one design, one set of standards, one thing to maintain, whether it's on AWS or on metal in a rack.</p>
+            <p>The same portability that eliminated the egress bill keeps the operational overhead flat — and it's the same design that runs our <a href="observability-case-study.html">self-hosted observability platform</a>. Build it to run anywhere, and "anywhere" stops being expensive.</p>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>The Result</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <h3>Egress Eliminated</h3>
+                    <p class="achievement-impact">~$17K/month &rarr; $0</p>
+                    <p>Co-locating compute with the blockchain nodes removed the data-egress bill entirely; only free, inbound writes reach the cloud.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Theft-Proof on Rented Hardware</h3>
+                    <p class="achievement-impact">Disk + host both covered</p>
+                    <p>Full-disk encryption defeats a stolen disk; operator-gated key release defeats a stolen machine — on hardware the company didn't own.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>One Platform, Not Two</h3>
+                    <p class="achievement-impact">Cloud + bare metal, one stack</p>
+                    <p>A single cloud-agnostic Kubernetes design runs the same everywhere, so hybrid didn't double the operational load.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
+        <div class="container">
+            <h2>Stop paying to move your own data.</h2>
+            <p class="value-prop" style="margin: 1rem auto 2rem;">Hybrid cloud and bare metal, designed as one portable stack — secure, owned, and free of the egress tax.</p>
+            <a href="index.html#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KATN Solutions. All rights reserved.</p>
+            <p>Infrastructure, Security & DevOps Consulting</p>
+            <a href="https://www.linkedin.com/company/katn-solutions/" target="_blank" class="footer-linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
