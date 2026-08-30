@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: a self-service encryption key and certificate system that issues, delivers, and audits TLS keys end to end — replacing a $1M commercial product that couldn't do last-mile delivery.">
+    <title>KATN Solutions | Encryption Key Management Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <style>
+        .cs-section { padding: 4rem 0; }
+        .cs-section:nth-of-type(even) { background: var(--light-gray); }
+        .cs-section h2 { color: var(--navy-blue); font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+        .cs-section h3 { color: var(--navy-blue); font-size: 1.3rem; margin: 2rem 0 0.75rem; text-align: center; }
+        .cs-section p { color: var(--black); line-height: 1.8; margin: 0 auto 1rem; max-width: 68ch; text-align: center; }
+        .cs-lead { font-size: 1.15rem; font-weight: 600; }
+        .cs-callout { border-left: 4px solid var(--gold); background: var(--white); padding: 1.25rem 1.5rem; margin: 1.5rem auto; border-radius: 0 8px 8px 0; box-shadow: 0 2px 10px rgba(0,31,63,0.06); max-width: 72ch; }
+        .cs-callout p { text-align: left; max-width: none; margin: 0; }
+        .cs-cta { text-align: center; padding: 4rem 0; }
+        .cs-cta p { margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-shield.png" alt="" class="logo-shield">
+                    <div class="logo-text">
+                        <span class="logo-name">KATN</span>
+                        <span class="logo-name logo-name-sub">SOLUTIONS</span>
+                        <span class="logo-tagline">Software Consulting &bull; Security Review</span>
+                        <span class="logo-tagline">&bull; Backend Infrastructure</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#ai-automation">AI Automation</a></li>
+                <li><a href="index.html#standards">Engineering Standards</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#expertise">Expertise</a></li>
+                <li><a href="index.html#achievements">Achievements</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="index.html#team">Leadership</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Encryption Keys, From Request to Running Server</h2>
+                <p class="tagline">A self-service system that issued, delivered, and audited TLS certificates and keys end to end — so an unskilled user could do it safely with the touch of a button, and no one ever pasted a private key into an email again.</p>
+                <p class="value-prop">The closest commercial product cost about $1M and still couldn't deliver a key to a running server. This one did — and it's still in production more than fifteen years later.</p>
+                <a href="#indirect-selection" class="cta-button">See the Design</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>The Problem</h2>
+            <p class="cs-lead">It started with a mistake anyone could make.</p>
+            <p>Someone put the wrong TLS certificate on the wrong host. Once was enough to see it would keep happening — and to realize the problem wasn't carelessness, it was that the whole process was manual, error-prone, and unsafe. Private keys were being pasted into group emails. OpenSSL's command-line options are <a href="https://nikogura.com/blog/c-style-vs-go-style">labyrinthine</a>, so even careful people got them wrong. And the piece nobody had solved was the last mile: getting the right key onto the right server, safely, and proving it happened.</p>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>The Build</h2>
+            <p>The first version was PKI automation that wrapped the labyrinth in a simple interface — give it a hostname, get back exactly what you need, delivered where it belongs. Word got around that there was finally a tool for TLS certificates, and a large bank's security team asked for one of their own. We built it, in the language their team could actually support, into a full encryption key management and delivery service.</p>
+            <p>Underneath, it unified two halves of a commercial PKI that had never really been married together (the vendor had bought two companies and left the seam showing), and it drove the bank's Luna hardware security modules — which the bank had purchased but couldn't figure out how to use — turning an idle hardware root of trust into something people could actually rely on. On top, an unsophisticated user could create a certificate for a hostname and deliver it to the application servers with one click. To make that last mile real, we instrumented the bank's own systems-management tooling to carry the key the final step and restart the service.</p>
+        </div>
+    </section>
+
+    <section id="indirect-selection" class="cs-section">
+        <div class="container">
+            <h2>The Design: Indirect Selection</h2>
+            <p>TLS certificates were only the obvious use case. Underneath, the system was a master class in what we call <strong>indirect selection</strong>: you could accomplish almost anything with it, but only by declaring exactly what you intended to do.</p>
+            <p>You never got shell access. Nothing happened without an explicit, named action — and every action left an audit trail: who did it, when, what they asked for, and what the result was, unbroken from key creation through delivery to service restart. Power was exposed only as declared, audited operations, never as open-ended access to the machine. That is what made it safe to hand something this sensitive to a user with no security background — the interface simply wouldn't let them do an undeclared, unaudited thing.</p>
+            <div class="cs-callout">
+                <p>It's the same principle behind everything we build now: declared intent, no ad-hoc shell, and a complete audit trail by construction. Get the interface right — expose capability as explicit, recorded actions — and safety stops depending on the user being an expert.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <h2>The Result</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <h3>Beat a $1M Product</h3>
+                    <p class="achievement-impact">~$1M commercial tool, no last mile</p>
+                    <p>The one commercial offering that came close cost about $1M — and still couldn't deliver a key to a running server. This system did, end to end.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Safe in Unskilled Hands</h3>
+                    <p class="achievement-impact">One-click issue and delivery</p>
+                    <p>A user with no security background could issue a certificate and push it to the app servers safely — because the interface only allowed declared, audited actions.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Still Running 15+ Years Later</h3>
+                    <p class="achievement-impact">In production a decade and a half on</p>
+                    <p>Built once, right — last we heard it was still in daily use, and it earned the bank's highest internal service award at the time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
+        <div class="container">
+            <h2>Make the dangerous thing safe to do.</h2>
+            <p class="value-prop" style="margin: 1rem auto 2rem;">Secrets, keys, and privileged operations — exposed as simple, declared, fully-audited actions, so the right thing is the easy thing.</p>
+            <a href="index.html#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KATN Solutions. All rights reserved.</p>
+            <p>Infrastructure, Security & DevOps Consulting</p>
+            <a href="https://www.linkedin.com/company/katn-solutions/" target="_blank" class="footer-linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
